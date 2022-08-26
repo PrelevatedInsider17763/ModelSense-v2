@@ -1,0 +1,67 @@
+﻿<Page
+    x:Class="ModelSense.ContentFrame"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ModelSense"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="1028" Width="1562">
+
+    <Grid>
+        <Grid VerticalAlignment="Top" Height="44" Canvas.ZIndex="4" Background="{ThemeResource AcrylicBackgroundFillColorDefaultBrush}">
+            <Button Click="Button_Click_2" Margin="1,0,0,0" Height="44" Background="{x:Null}" BorderBrush="{x:Null}" Width="46">
+                <SymbolIcon Symbol="Back"/>
+            </Button>
+            <Button Click="Button_Click_3" Margin="52,0,0,0" Height="44" BorderBrush="{x:Null}" Background="{x:Null}" Width="47">
+                <SymbolIcon Symbol="Back" RenderTransformOrigin="0.5,0.5">
+                    <SymbolIcon.RenderTransform>
+                        <CompositeTransform Rotation="180"/>
+                    </SymbolIcon.RenderTransform>
+                </SymbolIcon>
+            </Button>
+            <Button Click="Button_Click_1" Margin="104,0,0,0" Height="44" Background="{x:Null}" BorderBrush="{x:Null}" Width="45">
+                <SymbolIcon Symbol="Refresh"/>
+            </Button>
+            <AutoSuggestBox QuerySubmitted="SearchOrURL_QuerySubmitted" x:Name="SearchOrURL" KeyDown="SearchOrURL_KeyDown" HorizontalAlignment="Left" Margin="202,0,0,0" PlaceholderText="Search..." VerticalAlignment="Center" Height="34" Width="1153" Padding="10,4,6,6" FontSize="16">
+                <AutoSuggestBox.QueryIcon>
+                    <SymbolIcon Symbol="Find"/>
+                </AutoSuggestBox.QueryIcon>
+            </AutoSuggestBox>
+            <Button Click="Button_Click" Height="44" Width="54" Padding="11,5,12,6" Margin="1412,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}">
+                <muxc:PersonPicture HorizontalAlignment="Center" Height="22" VerticalAlignment="Center" Width="29"/>
+
+            </Button>
+            <Button Height="45" Width="49" Padding="11,5,12,6" Margin="1471,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}">
+                <Button.Flyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem>
+                            New tab
+                        </MenuFlyoutItem>
+                        <MenuFlyoutItem>
+                            New window
+                        </MenuFlyoutItem>
+                        <MenuFlyoutSeparator/>
+                        <MenuFlyoutSubItem Text="History">
+
+                        </MenuFlyoutSubItem>
+                        <MenuFlyoutSeparator/>
+                        <MenuFlyoutItem Click="MenuFlyoutItem_Click" Text="About">
+
+                        </MenuFlyoutItem>
+                    </MenuFlyout>
+                </Button.Flyout>
+                <SymbolIcon Symbol="More"/>
+            </Button>
+            <Button Height="45" Width="47" Padding="11,5,12,6" Margin="1360,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}">
+                <SymbolIcon Symbol="Library"/>
+            </Button>
+            <Button Margin="153,0,0,0" Height="44" Background="{x:Null}" BorderBrush="{x:Null}" Width="45">
+                <SymbolIcon Symbol="Home"/>
+            </Button>
+
+        </Grid>
+        <muxc:WebView2 Source="https://www.google.com" x:Name="CurrentWebsite" Canvas.ZIndex="4" VerticalContentAlignment="Top" Margin="0,44,10,184" HorizontalContentAlignment="Left"/>
+    </Grid>
+</Page>

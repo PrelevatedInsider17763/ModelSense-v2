@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+	<CommandSet xml:lang="en-us" Name="EnglishCommands-us">
+		<!-- The CommandPrefix provides an alternative name for your app -->
+		<CommandPrefix>NavigateURL</CommandPrefix>
+		<!-- The CommandSet Example appears beside your app's name in the global help -->
+		<Example>URL Search</Example>
+		<Command Name="OpenCommand">
+			<Example>Open</Example>
+			<ListenFor>Open</ListenFor>
+			<Feedback>You got it!</Feedback>
+			<Navigate Target="https://www.google.com/search?q=Cortana" />
+		</Command>
+	</CommandSet>
+
+	<CommandSet xml:lang="en-gb" Name="EnglishCommands-gb">
+		<!-- The CommandPrefix provides an alternative name for your app -->
+		<CommandPrefix>NavigateURL</CommandPrefix>
+		<!-- The CommandSet Example appears beside your app's name in the global help -->
+		<Example>URL Search</Example>
+		<Command Name="OpenCommand">
+			<Example>Open</Example>
+			<ListenFor>Open</ListenFor>
+			<Feedback>I'm on it!</Feedback>
+			<Navigate Target="https://www.google.com/search?q=Cortana" />
+		</Command>
+	</CommandSet>
+</VoiceCommands>
